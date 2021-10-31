@@ -1,24 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Card, { CardHeader, CardBody } from "./components/Card";
+import TimerLengthControl from "./components/TimerLengthControl";
+import Timer from "./components/Timer";
+import TimerControl from "./components/TimerControl";
+import CreditBox from "./components/CreditBox";
+import React from "react";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Card>
+        <CardHeader content="Pomodoro Clock" />
+        <CardBody>
+          <div className="flex">
+            <TimerLengthControl />
+            <TimerLengthControl />
+          </div>
+          <Timer />
+          <TimerControl />
+        </CardBody>
+      </Card>
+      <CreditBox
+        icons = {["fab fa-github", "fab fa-linkedin"]}
+        link="https://www.github.com/harmonify"
+        linkText="Wendy"
+      />
     </div>
   );
 }
