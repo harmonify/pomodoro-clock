@@ -1,45 +1,46 @@
-import React from "react";
+import { ReactElement } from "react";
 import { SiReact, SiTypescript } from "react-icons/si";
 import Store from "./Store";
 import updateSessionLength from "./actions/updateSessionLength";
 import updateBreakLength from "./actions/updateBreakLength";
-import Card, { CardHeader, CardBody } from "./components/Card";
+import Card from "./components/Card";
 import CreditBox from "./components/CreditBox";
+import Timer from "./components/Timer";
 import TimerLength from "./components/TimerLength";
 import useGlobalState from "./hooks/useGlobalState";
+import Container from "./components/Container";
 
-const App : React.FC = () => {
-  const [state, dispatch] = useGlobalState();
+const App = () : ReactElement => {
+  const [state] = useGlobalState();
 
   return (
     <Store>
-      <div className="flex flex-col justify-center items-center min-h-screen">
-        <Card>
-          <CardHeader content="Pomodoro Clock" />
-          <CardBody>
-            <div className="flex">
-              <TimerLength
-                label="Session Length"
-                timerLength={state.sessionLength}
-                setTimerLength={dispatch(updateSessionLength)}
-              />
-              <TimerLength
-                label="Break Length"
-                timerLength={state.breakLength}
-                setTimerLength={dispatch(updateBreakLength)}
-              />
-            </div>
-            <Timer
-
-            />
-          </CardBody>
-        </Card>
-        <CreditBox
-          icons={[<SiReact />, <SiTypescript />]}
-          link="https://www.github.com/harmonify"
-          linkText="Wendy"
-        />
-      </div>
+      <Container>
+        <>
+          <Card title="Pomodoro Clock">
+            <>
+              <div className="flex">
+                <TimerLength
+                  label="Session Length"
+                  timerLength={state.sessionLength}
+                  setTimerLength={updateSessionLength}
+                />
+                <TimerLength
+                  label="Break Length"
+                  timerLength={state.breakLength}
+                  setTimerLength={updateBreakLength}
+                />
+              </div>
+              <Timer />
+            </>
+          </Card>
+          <CreditBox
+            icons={[<SiReact />, <SiTypescript />]}
+            link="https://www.github.com/harmonify"
+            linkText="Wendy"
+          />
+        </>
+      </Container>
     </Store>
   );
 };

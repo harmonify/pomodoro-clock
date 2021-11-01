@@ -1,8 +1,14 @@
-import GlobalContext from '../Store';
-import { useContext } from 'react';
+import { GlobalContext } from '../Store';
+import { Dispatch, useContext } from 'react';
+import StateInterface from '../interfaces/StateInterface';
+import ActionInterface from '../interfaces/ActionInterface';
 
-const useGlobalState = () => {
-  const [state, dispatch] = useContext<any>(GlobalContext);
+interface useGlobalStateInterface {
+  () : [StateInterface, Dispatch<ActionInterface>];
+}
+
+const useGlobalState : useGlobalStateInterface = () => {
+  const { state, dispatch } = useContext(GlobalContext);
 
   return [state, dispatch];
 };
