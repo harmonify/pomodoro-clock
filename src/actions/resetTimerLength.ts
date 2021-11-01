@@ -1,4 +1,4 @@
-import { RESET_TIMER_LENGTH } from '../config/ACTIONS';
+import { RESET_TIMER_LENGTH } from '../configs/ACTIONS';
 
 const resetTimerLength = () => {
   return {

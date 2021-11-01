@@ -1,4 +1,4 @@
-import ACTIONS from "./config/ACTIONS";
+import ACTIONS from "./configs/ACTIONS";
 import ActionInterface from "./interfaces/ActionInterface";
 import StateInterface from "./interfaces/StateInterface";
 

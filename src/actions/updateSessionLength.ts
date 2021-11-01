@@ -1,4 +1,4 @@
-import { UPDATE_SESSION_LENGTH } from "../config/ACTIONS";
+import { UPDATE_SESSION_LENGTH } from "../configs/ACTIONS";
 
 const updateSessionLength = (sessionLength: number) => {
   return {

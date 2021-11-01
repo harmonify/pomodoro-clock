@@ -1,4 +1,4 @@
-import { UPDATE_TIMER_LENGTH } from "../config/ACTIONS";
+import { UPDATE_TIMER_LENGTH } from "../configs/ACTIONS";
 
 const updateTimerLength = (length: number) => {
   return {
