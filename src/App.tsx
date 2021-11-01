@@ -5,7 +5,7 @@ import TimerControl from "./components/TimerControl";
 import CreditBox from "./components/CreditBox";
 import React from "react";
 
-function App() {
+const App : React.FC = () => {
   return (
     <div>
       <Card>
@@ -26,6 +26,6 @@ function App() {
       />
     </div>
   );
-}
+};
 
 export default App;
