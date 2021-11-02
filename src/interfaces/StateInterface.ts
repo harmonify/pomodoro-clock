@@ -4,6 +4,7 @@ interface StateInterface {
   timerType: string;
   breakLength: number;        // in minutes
   sessionLength: number;      // in minutes
+  audioCurrentTime: number;
 }
 
 export default StateInterface;
