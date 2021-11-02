@@ -1,10 +1,26 @@
-# Getting Started with Create React App
+<div align="center">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Pomodoro Clock
+
+</div>
+<p align="center">
+<a href="https://harmonify-pc.netlify.app" target="_blank"><img src="https://raw.githubusercontent.com/harmonify/pomodoro-clock/main/.github/img/preview.png" width="600"></a>
+</p>
+
+A Pomodoro Clock I built with React and TypeScript for FreeCodeCamp's Front End Development Libraries Project. This project is hosted on [Netlify](https://harmonify-pc.netlify.app).
+
+## Dependencies
+
+What I used to build up this project.
+
+1. [React v17.0.2](https://reactjs.org/)
+2. [TypeScript v4.4.4](https://www.typescriptlang.org/)
+3. [Tailwind v2.2.17](https://tailwindcss.com/)
+4. [React Icons](https://react-icons.github.io/react-icons/)
 
 ## Available Scripts
 
-In the project directory, you can run:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app). In the project directory, you can run:
 
 ### `npm start`
 
@@ -44,3 +60,27 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
