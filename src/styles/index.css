@@ -19,7 +19,9 @@
 }
 
 @layer components {
-  
+  .container {
+    @apply flex flex-col items-center justify-center;
+  }
 }
 
 @layer utilities {
