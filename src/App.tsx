@@ -1,20 +1,18 @@
 import { ReactElement } from "react";
 import { SiReact, SiTypescript } from "react-icons/si";
-import Store from "./Store";
-import updateSessionLength from "./actions/updateSessionLength";
 import updateBreakLength from "./actions/updateBreakLength";
+import updateSessionLength from "./actions/updateSessionLength";
 import Card from "./components/Card";
+import Container from "./components/Container";
 import CreditBox from "./components/CreditBox";
 import Timer from "./components/Timer";
 import TimerLength from "./components/TimerLength";
 import useGlobalState from "./hooks/useGlobalState";
-import Container from "./components/Container";
 
 const App = () : ReactElement => {
   const [state] = useGlobalState();
 
   return (
-    <Store>
       <Container>
         <>
           <Card title="Pomodoro Clock">
@@ -35,13 +33,15 @@ const App = () : ReactElement => {
             </>
           </Card>
           <CreditBox
-            icons={[<SiReact />, <SiTypescript />]}
+            icons={[
+              <SiReact />,
+              <SiTypescript />
+            ]}
             link="https://www.github.com/harmonify"
             linkText="Wendy"
           />
         </>
       </Container>
-    </Store>
   );
 };
 
