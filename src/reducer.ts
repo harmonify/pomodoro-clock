@@ -1,7 +1,7 @@
-import * as ACTIONS from "./configs/ACTIONS";
+import ACTIONS from "./configs/ACTIONS";
+import { INITIAL_STATE } from "./configs/STATE";
 import ActionInterface from "./interfaces/ActionInterface";
 import StateInterface from "./interfaces/StateInterface";
-import { initialState } from "./Store";
 
 const reducer = (state : StateInterface, action : ActionInterface) : any => {
   switch (action.type) {
@@ -11,7 +11,7 @@ const reducer = (state : StateInterface, action : ActionInterface) : any => {
         isTimerRunning: !state.isTimerRunning,
       };
     case ACTIONS.RESET_TIMER_LENGTH:
-      return initialState;
+      return INITIAL_STATE;
     case ACTIONS.UPDATE_TIMER_LENGTH:
       return {
         ...state,

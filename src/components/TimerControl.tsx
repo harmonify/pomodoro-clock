@@ -1,22 +1,38 @@
-import { BsPlayFill, BsPauseFill } from "react-icons/bs";
-import { GrPowerReset } from "react-icons/gr";
 import toggleTimerState from "../actions/toggleTimerState";
 import resetTimerLength from "../actions/resetTimerLength";
 import useGlobalState from "../hooks/useGlobalState";
-import TimerInterface from "../interfaces/TimerInterface";
+import { PauseIcon, PlayIcon, ResetIcon } from "../configs/ICONS";
 
-const TimerControl: React.FC<TimerInterface> = () => {
+const TimerControl: React.FC = () => {
   const [state, dispatch] = useGlobalState();
 
+  const handleTimerToggle = (e: React.MouseEvent) => {
+    e.preventDefault();
+    dispatch(toggleTimerState());
+  };
+
+  const handleReset = (e: React.MouseEvent) => {
+    e.preventDefault();
+    dispatch(resetTimerLength());
+  };
+
   return (
-    <div className="timer-control">
-      <button className="timer-control-button" onClick={dispatch(toggleTimerState)}>
+    <div className="timer-control text-2xl">
+      <button
+        id="start_stop"
+        className="timer-control-button ring-hf"
+        onClick={handleTimerToggle}
+      >
         {state.isTimerRunning
-          ? <BsPauseFill />
-          : <BsPlayFill />}
+          ? PauseIcon
+          : PlayIcon}
       </button>
-      <button className="timer-control-button" onClick={dispatch(resetTimerLength)}>
-        <GrPowerReset />
+      <button
+        id="reset"
+        className="timer-control-button ring-hf"
+        onClick={handleReset}
+      >
+        {ResetIcon}
       </button>
     </div>
   );

@@ -3,6 +3,7 @@ import HOCInterface from "./interfaces/HOCInterface";
 import ActionInterface from "./interfaces/ActionInterface";
 import StateInterface from "./interfaces/StateInterface";
 import reducer from "./reducer";
+import { INITIAL_STATE } from "./configs/STATE";
 
 interface ContextInterface {
   state: StateInterface;
@@ -11,21 +12,12 @@ interface ContextInterface {
 
 const GlobalContext = createContext({} as ContextInterface);
 
-const initialState : StateInterface = {
-  breakLength: 5,
-  sessionLength: 25,
-  isTimerRunning: false,
-  timerType: "session",
-  timerLength: 60,
-};
-initialState.timerLength *= initialState.sessionLength;
-
 const initializeState = () => {
   const state : string | null = sessionStorage.getItem('state');
   if (state) {
     return JSON.parse(state);
   }
-  return initialState;
+  return INITIAL_STATE;
 };
 
 const Store : HOCInterface = ({ children }) => {
@@ -52,4 +44,4 @@ const Store : HOCInterface = ({ children }) => {
 };
 
 export default Store;
-export { GlobalContext, initialState };
+export { GlobalContext };

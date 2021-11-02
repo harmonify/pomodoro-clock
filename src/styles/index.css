@@ -17,3 +17,13 @@
       monospace;
   }
 }
+
+@layer components {
+  
+}
+
+@layer utilities {
+  .ring-hf {
+    @apply outline-none rounded hover:ring hover:ring-white hover:ring-offset-1 focus:ring focus:ring-white focus:ring-offset-1;
+  }
+}
