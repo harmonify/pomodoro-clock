@@ -24,10 +24,10 @@ const Store : HOCInterface = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initializeState());
   const initialRenderGlobalState = useRef(true);
 
+  /*
+   * @description: populate sessionStorage data from globalState if it exists
+   */
   useEffect(() => {
-    /*
-     populate sessionStorage data from globalState if it exists
-    */
     if (initialRenderGlobalState.current) {
       initialRenderGlobalState.current = false;
       return;
