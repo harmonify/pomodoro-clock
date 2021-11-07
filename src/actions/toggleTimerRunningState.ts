@@ -1,9 +1,9 @@
-import { TOGGLE_TIMER_RUNNING_STATE } from "../configs/ACTIONS";
+import ACTIONS from "../configs/ACTIONS";
 import ActionCreatorInterface from "../interfaces/ActionCreatorInterface";
 
 const toggleTimerRunningState : ActionCreatorInterface = () => {
   return {
-    type: TOGGLE_TIMER_RUNNING_STATE,
+    type: ACTIONS.TOGGLE_TIMER_RUNNING_STATE,
   };
 };
 

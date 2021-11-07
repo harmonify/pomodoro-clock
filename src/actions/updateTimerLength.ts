@@ -1,9 +1,9 @@
-import { UPDATE_TIMER_LENGTH } from "../configs/ACTIONS";
+import ACTIONS from "../configs/ACTIONS";
 import ActionCreatorInterface from "../interfaces/ActionCreatorInterface";
 
 const updateTimerLength : ActionCreatorInterface<number> = (length) => {
   return {
-    type: UPDATE_TIMER_LENGTH,
+    type: ACTIONS.UPDATE_TIMER_LENGTH,
     payload: {
       timerLength: length,
     },

@@ -1,5 +1,7 @@
+import ACTIONS from "../configs/ACTIONS";
+
 interface ActionInterface {
-  type: string;
+  type: ACTIONS;
   payload?: any;
 }
 

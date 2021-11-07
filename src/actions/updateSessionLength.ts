@@ -1,9 +1,9 @@
-import { UPDATE_SESSION_LENGTH } from "../configs/ACTIONS";
+import ACTIONS from "../configs/ACTIONS";
 import ActionCreatorInterface from "../interfaces/ActionCreatorInterface";
 
 const updateSessionLength : ActionCreatorInterface<number> = (sessionLength) => {
   return {
-    type: UPDATE_SESSION_LENGTH,
+    type: ACTIONS.UPDATE_SESSION_LENGTH,
     payload: {
       sessionLength: sessionLength
     }
