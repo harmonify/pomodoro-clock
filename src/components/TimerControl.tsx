@@ -2,7 +2,7 @@ import React from 'react';
 import toggleTimerRunningState from "../actions/toggleTimerRunningState";
 import resetTimerLength from "../actions/resetTimerLength";
 import useGlobalState from "../hooks/useGlobalState";
-import { PauseIcon, PlayIcon, ResetIcon } from "./ICONS";
+import { PauseIcon, PlayIcon, ResetIcon } from "../configs/ICONS";
 
 interface TimerControlProps {
   audioRef: React.RefObject<HTMLAudioElement>;

@@ -3,7 +3,7 @@ import Card from "./components/Card";
 import CreditBox from "./components/CreditBox";
 import Timer from "./components/Timer";
 import { AUTHOR } from "./configs/CONSTANTS";
-import { ReactIcon, TypeScriptIcon } from "./components/ICONS";
+import { ReactIcon, TypeScriptIcon } from "./configs/ICONS";
 
 const App = (): ReactElement => {
   return (

@@ -1,5 +1,5 @@
 import { MouseEventHandler } from 'react';
-import { MinusIcon, PlusIcon } from './ICONS';
+import { MinusIcon, PlusIcon } from '../configs/ICONS';
 import useGlobalState from '../hooks/useGlobalState';
 import ActionCreatorInterface from "../interfaces/ActionCreatorInterface";
 
